@@ -1,5 +1,5 @@
-FROM eclipse-temurin:21-jre-alpine
-# FROM eclipse-temurin:21-jdk
+# FROM eclipse-temurin:21-jre-alpine
+FROM eclipse-temurin:21-jdk
 
 COPY . /app
 
