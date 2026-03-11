@@ -1,15 +1,5 @@
 FROM eclipse-temurin:21-jre-alpine
 
-WORKDIR /app
-COPY server.jar .
+COPY . /app
 
-ENTRYPOINT [
-  "java",
-  "-XX:+UseSerialGC",
-  "-XX:MaxRAMPercentage=60",
-  "-XX:InitialRAMPercentage=10",
-  "-XX:MinRAMPercentage=10",
-  "-XX:+UseContainerSupport",
-  "-jar",
-  "server.jar"
-]
+ENTRYPOINT ["java", "-jar", "/app/server.jar"]
