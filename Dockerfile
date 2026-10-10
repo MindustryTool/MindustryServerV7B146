@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-jre-alpine
+FROM ghcr.io/graalvm/jdk-community:21
 
 COPY . /app
 
