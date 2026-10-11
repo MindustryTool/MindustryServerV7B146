@@ -1,5 +1,5 @@
-FROM ghcr.io/graalvm/jdk-community:25i4
+FROM ghcr.io/graalvm/jdk-community:25
 
 COPY . /app
 
-ENTRYPOINT ["java", "-jar", "/app/server.jar"]
+ENTRYPOINT ["java", "--enable-native-access=ALL-UNNAMED", "--add-opens=java.base/java.lang=ALL-UNNAMED", "--add-opens=java.base/java.util=ALL-UNNAMED", "-jar", "/app/server.jar"]
